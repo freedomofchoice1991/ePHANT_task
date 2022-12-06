@@ -33,12 +33,16 @@ class Customer:
 
 pairCustomerPool = []
 singleCustomerPool = []
+familyCustomerPool = []
 for i in range(1,2001):
     x = 'c'+'i'
     x = Customer(generateName(),random.randint(50,100), type(generateName()))
     if x.type is tuple:
         pairCustomerPool.append(x)
+    elif x.type is list:
+        familyCustomerPool.append(x)
     else:
         singleCustomerPool.append(x)    
 
 ##--------
+

@@ -11,15 +11,28 @@ def randName ():
 
 #=======
 
+
 def generateName ():  
-    CustomerTypes = ('S','P')
+    CustomerTypes = ('S','P','F')
     randomCustomerType = random.choice (CustomerTypes)
     if randomCustomerType == 'S':
         name = randName()
+        # print(name)
         return (name)
-    else:
+    elif randomCustomerType == 'P':
         name1 = randName()
         name2 = randName()
+        # print(name1,name2)
         return (name1,name2)
+    elif randomCustomerType == 'F': 
+        listOfFamilyNames = []
+        membersOfFamaily = random.randint(3,6)
+        for n in range(1,membersOfFamaily+1):
+            x = 'name'+'n'
+            x = randName()
+            listOfFamilyNames.append(x)
+        # print(listOfFamilyNames)    
+        return listOfFamilyNames    
+
 
 generateName()
